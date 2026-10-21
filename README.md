@@ -30,11 +30,13 @@ EMNIST is downloaded from NIST; if the download is refused, fetch `gzip.zip` in 
 
 ## Results
 
+> **v1.1 (2026-10-22)** - The v1.0 results and weights covered only the 10 Fashion-MNIST classes: a class-name case bug (`"F"` was looked up as `"f"`) dropped the 26 letter classes from training and evaluation (4,848 of the 6,699 test objects). v1.1 fixes `common/datasets/voc.py` and reports a re-training on all 36 classes. The v1.0 Release is kept for reference.
+
 Test set: FashionLetters36 test (1,024 images, 36 classes), IoU 0.5, after 30 epochs (1.8 h on an RTX 4070 Laptop GPU).
 
 | mAP50 | Recall | Final train loss | Train class accuracy |
 | --- | --- | --- | --- |
-| **0.0000** | 0.001 | 18.469 | 10.2 % |
+| **0.0000** | 0.000 | 25.930 | 3.0 % |
 
 Convergence (test mAP50):
 
